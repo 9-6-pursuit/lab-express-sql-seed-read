@@ -1,0 +1,10 @@
+nav{
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 4px grey ;
+    margin-bottom: 50px;
+    border-radius: 3%;
+}

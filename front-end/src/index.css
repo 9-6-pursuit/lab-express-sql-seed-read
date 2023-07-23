@@ -1,0 +1,17 @@
+.App{
+    margin: auto;
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  
+  td {
+    text-align: center;
+  }
+  tbody tr:nth-child(odd) {
+    background: lightgrey;
+  }
