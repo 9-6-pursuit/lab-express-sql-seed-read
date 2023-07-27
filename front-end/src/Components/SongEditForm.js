@@ -1,50 +1,58 @@
 import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function BookmarkNewForm() {
+function SongEditForm() {
+  let { id } = useParams();
   let navigate = useNavigate();
 
-  const addBookmark = (newBookmark) => {
-    axios
-      .post(`${API}/bookmarks`, newBookmark)
-      .then(
-        () => {
-          navigate(`/bookmarks`);
-        },
-        (error) => console.error(error)
-      )
-      .catch((c) => console.warn("catch", c));
-  };
-
-  const [bookmark, setBookmark] = useState({
+  const [song, setSong] = useState({
     name: "",
     url: "",
     category: "",
     is_favorite: false,
   });
 
+  const updateSong = (updatedSong) => {
+    axios
+      .put(`${API}/playlists/${id}`, updatedSong)
+      .then(
+        () => {
+          navigate(`/songs/${id}`);
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c));
+  };
+
   const handleTextChange = (event) => {
-    setBookmark({ ...bookmark, [event.target.id]: event.target.value });
+    setSong({ ...song, [event.target.id]: event.target.value });
   };
 
   const handleCheckboxChange = () => {
-    setBookmark({ ...bookmark, is_favorite: !bookmark.is_favorite });
+    setSong({ ...song, is_favorite: !song.is_favorite });
   };
+
+  useEffect(() => {
+    axios.get(`${API}/songs/${id}`).then(
+      (response) => setSong(response.data),
+      (error) => navigate(`/not-found`)
+    );
+  }, [id, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addBookmark(bookmark);
+    updateSong(song, id);
   };
   return (
-    <div className="New">
+    <div className="Edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           id="name"
-          value={bookmark.name}
+          value={song.name}
           type="text"
           onChange={handleTextChange}
           placeholder="Name of Website"
@@ -56,7 +64,7 @@ function BookmarkNewForm() {
           type="text"
           pattern="http[s]*://.+"
           required
-          value={bookmark.url}
+          value={song.url}
           placeholder="http://"
           onChange={handleTextChange}
         />
@@ -65,7 +73,7 @@ function BookmarkNewForm() {
           id="category"
           type="text"
           name="category"
-          value={bookmark.category}
+          value={song.category}
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
@@ -74,14 +82,18 @@ function BookmarkNewForm() {
           id="is_favorite"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={bookmark.is_favorite}
+          checked={song.is_favorite}
         />
 
         <br />
+
         <input type="submit" />
       </form>
+      <Link to={`/songs/${id}`}>
+        <button>Nevermind!</button>
+      </Link>
     </div>
   );
 }
 
-export default BookmarkNewForm;
+export default SongEditForm;

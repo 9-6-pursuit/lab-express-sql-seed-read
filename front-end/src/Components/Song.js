@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 
-function Bookmark({ bookmark }) {
+function Song({ song }) {
   return (
     <tr>
       <td>
-        {bookmark.is_favorite ? (
+        {song.is_favorite ? (
           <span>⭐️</span>
         ) : (
           <span>&nbsp; &nbsp; &nbsp;</span>
         )}
       </td>
       <td>
-        <a href={bookmark.url} target="_blank" rel="noreferrer">
-          {bookmark.name}
+        <a href={song.url} target="_blank" rel="noreferrer">
+          {song.name}
         </a>
       </td>
       <td>
-        <Link to={`/bookmarks/${bookmark.id}`}>✏️</Link>
+        <Link to={`/songs/${song.id}`}>✏️</Link>
       </td>
     </tr>
   );
 }
 
-export default Bookmark;
+export default Song;

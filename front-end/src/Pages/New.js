@@ -1,10 +1,10 @@
-import BookmarkNewForm from "../Components/BookmarkNewForm";
+import SongNewForm from "../Components/SongNewForm";
 
 function New() {
   return (
     <div className="New">
       <h2>New</h2>
-      <BookmarkNewForm />
+      <SongNewForm />
     </div>
   );
 }

@@ -1,30 +1,30 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Bookmark from "./Bookmark";
+import Song from "./Song";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Bookmarks() {
-  const [bookmarks, setBookmarks] = useState([]);
+function Songs() {
+  const [songs, setSongs] = useState([]);
 
   useEffect((id) => {
-    axios.get(`${API}/bookmarks/${id}`);
+    axios.get(`${API}/playlists/${id}`);
   }, []);
 
   return (
-    <div className="Bookmarks">
+    <div className="Songs">
       <section>
         <table>
           <thead>
             <tr>
               <th></th>
               <th>Take me there</th>
-              <th>See this bookmark</th>
+              <th>See this song</th>
             </tr>
           </thead>
           <tbody>
-            {bookmarks.map((bookmark) => {
-              return <Bookmark key={bookmark.id} bookmark={bookmark} />;
+            {songs.map((song) => {
+              return <Song key={song.id} song={song} />;
             })}
           </tbody>
         </table>
@@ -33,4 +33,4 @@ function Bookmarks() {
   );
 }
 
-export default Bookmarks;
+export default Songs;
