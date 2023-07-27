@@ -1,6 +1,5 @@
 // THIS FILE HOLDS RESPONSE FROM ALL REQUESTS MADE TO DATABASE
 const db = require("../db/dbConfig.js");
-// const { sortAndFilter } = require("../validations/checkSongs.js");
 
 // INDEX: ALL SONGS w/QUERIES
 const getAllSongs = async (order, is_favorite) => {
@@ -20,7 +19,7 @@ const getAllSongs = async (order, is_favorite) => {
   }
 
   try {
-    // console.log("SQL query:", query); // DEBUGGING
+    console.log("SQL query:", query); 
     const allSongs = await db.any(query);
     return allSongs;
   } catch (error) {
