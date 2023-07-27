@@ -14,8 +14,9 @@ const {
 
 // INDEX
 songs.get("/", async (req, res) => {
+  const { order, is_favorite } = req.query;
   try {
-    const allSongs = await getAllSongs();
+    const allSongs = await getAllSongs(order, is_favorite);
     if (allSongs.length > 0) {
       res.status(200).json(allSongs);
     } else {
@@ -33,8 +34,8 @@ songs.get("/:id", async (req, res) => {
   if (song.time) {
     res.json(song);
   } else {
-    // res.redirect("*"); // BROWSER ERROR
-    res.status(404).json("Song not found with the given ID");
+    res.redirect("/404"); // BROWSER ERROR
+    // res.status(404).json("Song not found with the given ID");
   }
 });
 

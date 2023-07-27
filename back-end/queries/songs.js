@@ -1,12 +1,27 @@
 // THIS FILE HOLDS RESPONSE FROM ALL REQUESTS MADE TO DATABASE
 const db = require("../db/dbConfig.js");
+// const { sortAndFilter } = require("../validations/checkSongs.js");
 
-// INDEX: ALL SONGS
-const getAllSongs = async () => {
-    // console.log("getAllSongs")
+// INDEX: ALL SONGS w/QUERIES
+const getAllSongs = async (order, is_favorite) => {
+  // Default SQL query to select all songs
+  let query = "SELECT * FROM songs";
+  // Check if is_favorite query parameter is provided and adjust the query accordingly
+  if (is_favorite === "true") {
+    query += " WHERE is_favorite = true";
+  } else if (is_favorite === "false") {
+    query += " WHERE is_favorite = false";
+  }
+  // Check if order query parameter is provided and adjust the query accordingly
+  if (order === "asc") {
+    query += " ORDER BY name ASC";
+  } else if (order === "desc") {
+    query += " ORDER BY name DESC";
+  }
+
   try {
-    const allSongs = await db.any("SELECT * FROM songs");
-    // console.log(allSongs)
+    // console.log("SQL query:", query); // DEBUGGING
+    const allSongs = await db.any(query);
     return allSongs;
   } catch (error) {
     return error;
