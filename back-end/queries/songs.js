@@ -1,4 +1,4 @@
-const db = require("../db/dbConfig.js");
+const db = require("../db/dbconfig");
 
 // === GET ALL SONGS ===
 const getAllSongs = async() => {

@@ -1,10 +1,18 @@
+// this is similar to app.js in bookmarks2
+
+
 // === DEPENDENCIES ===
 const express = require('express');
 const cors = require("cors");
 
 // === CONFIGURATION ===
 const app = express();
-const PORT = 4000;
+
+// === MIDDLEWARE
+app.use(cors());
+app.use(express.json());
+
+
 
 // === ROUTES ===
 
@@ -14,7 +22,7 @@ app.get("/", (req, res) => {
 
 
 // SONG ROUTES
-const songController = require("/.controllers/songController.js");
+const songController = require("./controllers/songController.js");
 app.use("/songs", songController);
 
 
@@ -30,11 +38,3 @@ module.exports = app;
 
 
 // =====================
-
-app.listen(PORT, (error) =>{
-	if(!error)
-		console.log("Server is Successfully Running, and App is listening on port "+ PORT)
-	else
-		console.log("Error occurred, server can't start", error);
-	}
-);

@@ -6,7 +6,7 @@ const {
     createSong,
     deleteSong,
     updateSong,
-} = require("...queries/songs");
+} = require("../queries/songs.js");
 const { 
     checkName,
     checkBoolean,
