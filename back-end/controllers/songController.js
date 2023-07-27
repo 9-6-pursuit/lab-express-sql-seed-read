@@ -8,6 +8,9 @@ const {
   deleteSong,
   updateSong,
 } = require("../queries/songs");
+const {
+    checkName, checkBoolean, checkArtist
+} = require("../validations/checkSongs")
 
 // INDEX
 songs.get("/", async (req, res) => {
@@ -27,15 +30,16 @@ songs.get("/", async (req, res) => {
 songs.get("/:id", async (req, res) => {
   const { id } = req.params;
   const song = await getSong(id);
-  if (song) {
+  if (song.time) {
     res.json(song);
   } else {
-    res.status(404).json({ error: "not found" });
+    // res.redirect("*"); // BROWSER ERROR
+    res.status(404).json("Song not found with the given ID");
   }
 });
 
 // CREATE
-songs.post("/", async (req, res) => {
+songs.post("/", checkName, checkBoolean, checkArtist, async (req, res) => {
   try {
     const song = await createSong(req.body);
     res.json(song);

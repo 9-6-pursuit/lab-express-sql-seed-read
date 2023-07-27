@@ -19,7 +19,7 @@ const getSong = async (id) => {
     const oneSong = await db.one("SELECT * FROM songs WHERE id=$1", id);
     return oneSong;
   } catch (error) {
-    return error;
+    return error; // DATABASE ERROR
   }
 };
 
