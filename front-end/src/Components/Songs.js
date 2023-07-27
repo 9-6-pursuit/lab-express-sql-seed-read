@@ -21,8 +21,9 @@ function Songs() {
           <thead>
             <tr>
               <th scope="col">Fav</th>
-              <th scope="col">Song</th>
               <th scope="col">Artist</th>
+              <th scope="col">Album</th>
+              <th scope="col">Name</th>
               <th scope="col">Time</th>
             </tr>
           </thead>
@@ -36,8 +37,9 @@ function Songs() {
                     <span>&nbsp; &nbsp; &nbsp;</span>
                   )}
                 </td>
-                <td>{song.name}</td>
+                <td>{song.artist}</td>
                 <td>{song.album}</td>
+                <td>{song.name}</td>
                 <td>{song.time}</td>
                 <td>
                   <Link to={`/songs/${song.id}`}>more info</Link>
