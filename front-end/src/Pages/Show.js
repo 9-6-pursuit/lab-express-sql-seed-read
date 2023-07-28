@@ -3,8 +3,8 @@ import ShowDetails from "../Components/ShowDetails";
 
 function Show() {
   return (
-    <div className="Index">
-      <h2>Show</h2>
+    <div>
+      <h2 className="Show">Show</h2>
       <ShowDetails />
     </div>
   );
