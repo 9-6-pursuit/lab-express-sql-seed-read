@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light">
       <h1>
-        <Link to="/songs">TUNER APP</Link>
+        <Link className="tuner-app" to="/songs">
+          Tuner APP
+        </Link>
       </h1>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-        <Link to="/songs/new">New Song</Link>
+      <button className="btn btn-outline-success my-2 my-sm-0 button">
+        <Link to="/songs/new" style={{ textDecoration: "none", color: "#fcb3c1" }}>
+          New Song
+        </Link>
       </button>
     </nav>
   );
