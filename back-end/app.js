@@ -17,7 +17,7 @@ app.use(express.json());
 // === ROUTES ===
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the Tuner App");
+    res.send("Welcome to the Tuner App [Back-End]");
 });
 
 

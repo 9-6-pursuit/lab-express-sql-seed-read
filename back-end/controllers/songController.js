@@ -55,7 +55,7 @@ songs.delete("/:id", async (req, res) => {
     if (deletedSong.id) {
       res.status(200).json(deletedSong);
     } else {
-      res.status(404).json.apply("Bookmark not found");
+      res.status(404).json.apply("Song not found");
     }
   });
 
