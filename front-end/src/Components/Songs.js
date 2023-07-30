@@ -28,8 +28,9 @@ function Songs() {
             </tr>
           </thead>
           <tbody>
-            {songs.map((song) => (
-              <tr key={song.id}>
+            {songs.map((song, index) => (
+              <tr key={song.id}
+                className={index % 2 === 0 ? "row-even" : "row-odd"}>
                 <td>
                   {song.is_favorite ? (
                     <span>⭐️</span>
