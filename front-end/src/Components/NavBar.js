@@ -8,11 +8,6 @@ export default function NavBar() {
           Tuner APP
         </Link>
       </h1>
-      {/* <button className="btn btn-outline-success my-2 my-sm-0 button">
-        <Link to="/songs/new" style={{ textDecoration: "none", color: "#fcb3c1" }}>
-          New Song
-        </Link>
-      </button> */}
     </nav>
   );
 }
