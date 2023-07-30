@@ -11,3 +11,11 @@ CREATE TABLE songs (
  time TEXT,
  is_favorite BOOLEAN
 );
+
+DROP TABLE IF EXISTS albums;
+
+CREATE TABLE albums(
+ id SERIAL PRIMARY KEY,
+ name TEXT NOT NULL,
+ artist TEXT
+);

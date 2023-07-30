@@ -18,6 +18,9 @@ app.get("/", (req, res) => {
 const songsController = require("./controllers/songController.js");
 app.use("/songs", songsController);
 
+const albumController = require("./controllers/albumController.js")
+app.use("/albums", albumController)
+
 // 404 PAGE
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
