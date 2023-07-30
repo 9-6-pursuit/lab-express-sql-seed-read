@@ -38,8 +38,12 @@ function ShowDetails() {
         <h3>
           {song.is_favorite ? <span>⭐️</span> : null} Album: {song.album}
         </h3>
+        {/* Add an image on the front side */}
+        {/* <img src="path_to_your_image.jpg" alt="Album Cover" /> */}
       </div>
       <div className="back">
+        {/* Add content on the back side */}
+        {/* <img src="path_to_your_image.jpg" alt="Album Cover" /> */}
         <h5>Name: {song.name}</h5>
         <h6>Artist: {song.artist}</h6>
         <p>Duration: {song.time}</p>
