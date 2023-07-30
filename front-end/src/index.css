@@ -16,7 +16,7 @@ tbody tr:nth-child(odd) {
   background: lightgrey;
 }
 
-tbody td:not(td:first-of-type):not(td:last-child):hover {
+tbody td:not(td:first-of-type):not(td:last-child):not(td:nth-child(3)):hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
@@ -38,11 +38,17 @@ th{
 
 .link{
   text-decoration: none;
-  color: green ;
+  color: black ;
 }
+
 .link:active{
   color: white;
 }
+
+.link:hover{
+  color: green;
+}
+
 .bigBox{
   border: 2px solid green;
   padding: 10px;
