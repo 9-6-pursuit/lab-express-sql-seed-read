@@ -8,3 +8,16 @@ nav{
     margin-bottom: 50px;
     border-radius: 3%;
 }
+
+.navLink{
+    text-decoration: none;
+    color: black;
+}
+
+.navLink:hover{
+    color: green;
+}
+
+.navLink:active{
+    color: white;;
+}

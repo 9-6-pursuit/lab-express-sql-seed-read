@@ -7,7 +7,7 @@ export default function Song({song}) {
             {song.is_favorite ? '⭐️':''}
         </td>
         <td>
-            <a href={`/songs/${song.id}`}>{song.name}</a>
+            <a className='link' href={`/songs/${song.id}`}>{song.name}</a>
         </td>
         <td>
             {song.artist}

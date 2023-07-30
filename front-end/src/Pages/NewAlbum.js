@@ -1,16 +1,16 @@
-import NewForm from "../Components/NewForm";
+import AlbumNewForm from "../Components/AlbumNewForm";
 
-function New() {
+function NewAlbum() {
   return (
     <div className="New">
       <div className="form-header">
-        <h2>New Song</h2>
+        <h2>New Album</h2>
       </div>
       <div className="form-details">
-        <NewForm />
+        <AlbumNewForm />
       </div>
     </div>
   );
 }
 
-export default New;
+export default NewAlbum;

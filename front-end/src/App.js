@@ -11,6 +11,10 @@ import Show from "./Pages/Show";
 
 // COMPONENTS
 import NavBar from "./Components/NavBar";
+import IndexAlbum from "./Pages/IndexAlbum";
+import ShowAlbum from "./Pages/ShowAlbum";
+import NewAlbum from "./Pages/NewAlbum";
+
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
             <Route path="/songs" element={<Index />} />
             <Route path="/songs/new" element={<New />} />
             <Route path="/songs/:index" element={<Show />} />
+            <Route path="/albums/" element={<IndexAlbum />} />
+            <Route path="/albums/new" element={<NewAlbum />} />
+            <Route path="/albums/:index" element={<ShowAlbum/>} />
             <Route path="/songs/:index/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>

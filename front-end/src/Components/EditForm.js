@@ -91,7 +91,7 @@ export default function EditForm() {
           onChange={handleTextChange}
           />
         </div> 
-        <div className="labelSection" >
+        <div className="checkbox" >
           <label htmlFor="is_favorite">Favorite? </label>
           <input
           id="is_favorite"

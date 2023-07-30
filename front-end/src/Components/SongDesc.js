@@ -44,11 +44,17 @@ export default function SongDesc() {
         {song.is_favorite ? " ✅" : " 👎" }</p>
       </div>
 
-        <div className="showNavigation">
-          <div className=''>
+      <div className="showNavigation">
+        <div className=''>
             {" "}
             <Link className='' to={`/songs`}>
-              <button className='navButton'>Back</button>
+              <button className='navButton'>Return to Songs</button>
+            </Link>
+          </div>
+          <div className=''>
+            {" "}
+            <Link className='' to={`/albums/${song.album}`}>
+              <button className='navButton'>Look at Album</button>
             </Link>
           </div>
           <div className=''>
