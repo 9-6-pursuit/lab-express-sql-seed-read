@@ -43,10 +43,9 @@ function Footer() {
 
 // FOOTER CSS
 const footerStyle = {
-  backgroundColor: "#f0f0f0",
-  padding: "10px",
+  backgroundColor: "#c9294a",
+  padding: "5px",
   textAlign: "center",
-//   marginTop: "auto",
 };
 
 const socialStyle = {
