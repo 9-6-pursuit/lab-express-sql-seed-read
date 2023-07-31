@@ -1,12 +1,13 @@
-DROP DATABASE IF EXISTS tuner_dev;
-CREATE DATABASE tuner_dev;
+DROP DATABASE IF EXISTS tuner;
+CREATE DATABASE tuner;
 
-\c tuner_dev;
+\c tuner;
+DROP TABLE IF EXISTS songs;
 
 CREATE TABLE songs (
  id SERIAL PRIMARY KEY,
- name TEXT REQUIRED,
- artist TEXT REQUIRED,
+ name TEXT NOT NULL,
+ artist TEXT NOT NULL,
  album TEXT,
  time TEXT,
  is_favorite BOOLEAN

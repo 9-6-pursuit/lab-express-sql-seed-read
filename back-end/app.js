@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 
-// SONG ROUTES
+// SONG ROUTES (implement the index route that uses pg-promise to query your db)
 const songController = require("./controllers/songController.js");
 app.use("/songs", songController);
 

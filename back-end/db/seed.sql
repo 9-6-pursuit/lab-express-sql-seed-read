@@ -1,6 +1,6 @@
-\c tuner_dev;
+\c tuner
 
-INSERT INTO tuner (name, artist, time, album, is_favorite) VALUES
-('Enya', 'Enya', 'time', 'Orinoco Flow', false),
-('Sheryl Crowe', 'Sheryl Crowe', 'time' ,'Sheryl Crowe' false),
-('Back Pocket Memory', 'Ian Flechlin', 'time', 'BPM demo', false);
+INSERT INTO songs (name, artist, time, album, is_favorite) VALUES
+('Time Flows', 'Enya', '1', 'Orinoco Flow', false),
+('Every Day Is A Winding Road', 'Sheryl Crowe', '2' ,'Sheryl Crowe', false),
+('Back Pocket Memory', 'Ian Flechlin', '3', 'BPM demo', false)
