@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-// import NotFound from "./Components/NotFound";
 
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
+import Error from "./Pages/Error";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -17,13 +18,13 @@ function App() {
         <NavBar />
         <main style={mainStyle}>
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Index />} />
             <Route path="/songs/new" element={<New />} />
             <Route path="/songs/:id" element={<Show />} />
             <Route path="/songs/:id/edit" element={<Edit />} />
+          <Route path="*" element={<Error />} />
           </Routes>{" "}
-          {/* <Route path="*" element={<NotFound />} /> */}
         </main>
       </Router>
       <Footer />
