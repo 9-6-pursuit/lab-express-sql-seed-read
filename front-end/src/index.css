@@ -1,0 +1,13 @@
+/* styles.css */
+
+/* Add the following CSS to center the index content in the middle of the page */
+.index-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height to fit your app layout */
+  }
+  
+  /* Additional CSS styling for other elements in your app */
+  
+  
