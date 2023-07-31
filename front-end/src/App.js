@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="">
-      <h1>Tuner App</h1>
+      <h1>Front End of Tuner App</h1>
     </div>
   );
 }
