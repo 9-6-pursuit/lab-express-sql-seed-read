@@ -18,7 +18,7 @@ function Home() {
         alignItems: "center",
       }}
     >
-      {/* <h1 className="homepage">Welcome to our Tuner App!</h1> */}
+      <h1>Welcome to our Tuner App!</h1>
     </div>
   );
 }

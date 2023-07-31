@@ -193,3 +193,9 @@ input[type="submit"]:hover {
 .Home {
   background-color: #F6F6F6;
 }
+
+div > h1 {
+  margin-right: auto;
+  padding: 50px;
+  margin-bottom: 30%;
+}
