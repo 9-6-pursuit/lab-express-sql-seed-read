@@ -13,9 +13,9 @@ const getAllSongs = async (order, is_favorite) => {
   }
   // Check if order query parameter is provided and adjust the query accordingly
   if (order === "asc") {
-    query += " ORDER BY name ASC";
+    query += " ORDER BY artist ASC";
   } else if (order === "desc") {
-    query += " ORDER BY name DESC";
+    query += " ORDER BY artist DESC";
   }
 
   try {
