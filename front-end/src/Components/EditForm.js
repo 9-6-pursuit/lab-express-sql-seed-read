@@ -99,7 +99,7 @@ function EditForm() {
         <input type="submit" />
       </form>
       <Link to={`/songs/${id}`}>
-        <button>Nevermind!</button>
+        <button className="error-button">Nevermind!</button>
       </Link>
     </div>
   );
