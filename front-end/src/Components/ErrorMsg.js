@@ -7,7 +7,7 @@ function ErrorMsg() {
       <h1>404 - Page Not Found</h1>
       <p>The page you are looking for could not be found.</p>
       <Link to="/songs">
-        <button>Back</button>
+        <button className="error-button">Back</button>
       </Link>
     </div>
   );
