@@ -9,8 +9,13 @@ import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 
+
+
 // COMPONENTS
 import NavBar from "./Components/NavBar";
+
+// // CSS 
+// import "./index.css"
 
 function App() {
   return (
