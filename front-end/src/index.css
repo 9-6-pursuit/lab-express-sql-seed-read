@@ -1,0 +1,201 @@
+/* SHOW DETAILS CSS */
+.article {
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+  height: 200px;
+  border-radius: 4px;
+  perspective: 1000px; /* Set the perspective for the 3D effect */
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c9294a;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d; /* Ensure 3D transform preservation */
+  transition: transform 0.6s;
+}
+
+.front {
+  transform: rotateY(0); /* Show the front side */
+}
+
+/*.front,
+  .back img {
+  width: 150px; /* Set the desired width of the image 
+  height: auto; /* Maintain the aspect ratio 
+  max-height: 150px; /* Set the maximum height of the image (optional) 
+  /* object-fit: cover; Scale the image to cover the container 
+}*/
+
+.back {
+  transform: rotateY(180deg); /* Initially hide the back side */
+}
+/* Add hover effect to flip the card on hover */
+.article:hover .front {
+  transform: rotateY(180deg);
+}
+
+.article:hover .back {
+  transform: rotateY(360deg);
+}
+
+.showNavigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.showNavigation div {
+  margin-left: 10px;
+}
+
+.showNavigation button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+/* SONGS CSS*/
+.Songs {
+  max-width: 950px;
+}
+
+/* tr.row-even {
+  background-color: #fdd6de;
+}
+
+tr.row-odd {
+  background-color: #fcc5d7;
+} */
+tr {
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+/* NAVBAR CSS */
+.navbar {
+  background-color: #c9294a;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tuner-app {
+  color: #fcb3c1;
+  text-decoration: none;
+  font-family: "Kaushan Script", cursive;
+  font-size: 56px;
+}
+/* INDEX PAGE CSS */
+.button {
+  margin-left: 75%;
+  border-color: #ff7aa6;
+}
+
+.Index > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.Index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Index button:hover {
+  background-color: #ff7aa6;
+}
+/* SHOW PAGE CSS */
+.Show {
+  padding-left: 20px;
+}
+
+.show-buttons {
+  border-color: #fcb3c1;
+}
+/* NEW & EDIT SONG CSS */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fcb3c1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.New {
+  padding-left: 20px;
+}
+/* ERROR MSG CSS */
+.Error {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.error-button {
+  border-color: #fcb3c1;
+  border-radius: 4px;
+  padding: 10px 25px;
+  background-color: #fcb3c1;
+}
+/* HOME PAGE CSS */
+.Home {
+  background-color: #F6F6F6;
+}
+
+div > h1 {
+  margin-right: auto;
+  padding: 50px;
+  margin-bottom: 30%;
+}
