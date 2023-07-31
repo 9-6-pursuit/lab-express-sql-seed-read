@@ -1,0 +1,30 @@
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-container a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-container button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .nav-container button:hover {
+    background-color: #666;
+  }
+  
