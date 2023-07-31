@@ -1,3 +1,4 @@
+DROP  DATABASE songs_dev;
 CREATE DATABASE songs_dev;
 
 \c songs_dev;
