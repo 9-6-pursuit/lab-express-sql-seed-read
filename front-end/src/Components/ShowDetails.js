@@ -21,15 +21,20 @@ function ShowDetails() {
   }, [id, API]);
 
   const deleteSong = () => {
-    axios
-      .delete(`${API}/songs/${id}`)
-      .then(
-        () => {
-          navigate(`/songs`);
-        },
-        (error) => console.error(error)
-      )
-      .catch((c) => console.warn("catch", c));
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this song?"
+    );
+    if (confirmed) {
+      axios
+        .delete(`${API}/songs/${id}`)
+        .then(
+          () => {
+            navigate(`/songs`);
+          },
+          (error) => console.error(error)
+        )
+        .catch((c) => console.warn("catch", c));
+    }
   };
 
   return (
