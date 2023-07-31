@@ -26,7 +26,7 @@ songController.get("/", async (req, res) => {
 			res.status(204).send("There are no songs to get");
 		}
 	} catch (error) {
-		res.status(500).send("Error fetching songs: " + error.message);
+		res.status(500).send("Error fetching songs: " + error.detail);
 	}
 });
 
@@ -40,7 +40,7 @@ songController.get("/:id", async (req, res) => {
 			res.status(404).send("Song not found");
 		}
 	} catch (error) {
-		res.status(500).send("Error fetching song: " + error.message);
+		res.status(500).send("Error fetching song: " + error.detail);
 	}
 });
 
@@ -51,12 +51,15 @@ songController.post(
 	checkName,
 	async (req, res) => {
 		const { name, artist, album, time, is_favorite } = req.body;
-		let favorite = is_favorite === "true" ? true : false;
+		let favorite =
+			is_favorite === "true" || is_favorite === true ? true : false;
 		try {
 			let newSong = await createSong(name, artist, album, time, favorite);
 			res.status(200).json(newSong);
 		} catch (error) {
-			res.status(500).send("Error creating song: " + error.message);
+			res.status(500).json({
+				error: "Error creating song: " + error.detail,
+			});
 		}
 	}
 );
@@ -68,7 +71,7 @@ songController.delete("/:id", async (req, res) => {
 		res.status(200).json(deletedSong);
 	} catch (error) {
 		res.status(404).json({
-			error: "Error deleting song: " + error.message,
+			error: "Error deleting song: " + error.detail,
 		});
 	}
 });
@@ -81,6 +84,8 @@ songController.put(
 	async (req, res) => {
 		const { id } = req.params;
 		const { name, artist, album, time, is_favorite } = req.body;
+		let favorite =
+			is_favorite === "true" || is_favorite === true ? true : false;
 		try {
 			let updatedSong = await updateSong(
 				id,
@@ -88,7 +93,7 @@ songController.put(
 				artist,
 				album,
 				time,
-				is_favorite
+				favorite
 			);
 			if (updatedSong) {
 				res.status(200).json(updatedSong);
@@ -96,7 +101,7 @@ songController.put(
 				res.status(404).send("Song not found");
 			}
 		} catch (error) {
-			res.status(500).send("Error updating song: " + error.message);
+			res.status(500).send("Error updating song: " + error.detail);
 		}
 	}
 );

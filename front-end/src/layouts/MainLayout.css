@@ -1,0 +1,82 @@
+.structure {
+    display: grid;
+    height: calc(100vh);
+    gap: 0px;
+    grid-template-columns: 1.5fr 6fr 1fr;
+    grid-template-rows: 120px calc(100% - 150px) 30px;
+}
+
+header {
+    grid-column: 1/4;
+    grid-row: 1/1;
+    height: 120px;
+    font-family: "Permanent Marker";
+    text-shadow: 0px 0px 22px #fbb3c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c9174a;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(1deg) translate(0px, -50px);
+    -webkit-transform: rotate(1deg) translate(0px, -50px);
+    -moz-transform: rotate(1deg) translate(0px, -50px);
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.67);
+    margin: 0px;
+    z-index: 2;
+}
+
+header a {
+    text-decoration: none;
+    color: #fbb3c1;
+    margin-top: 40px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #fbb3c1;
+    transform: rotate(1deg) translate(-10px, -120px);
+    -webkit-transform: rotate(1deg) translate(-10px, -120px);
+    -moz-transform: rotate(1deg) translate(-10px, -120px);
+    height: 100vh;
+}
+
+main {
+    background-color: white;
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef0f3;
+    transform: rotate(1deg) translate(10px, -120px);
+    -webkit-transform: rotate(1deg) translate(10px, -120px);
+    -moz-transform: rotate(1deg) translate(10px, -120px);
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/4;
+    background-color: #f94d6d;
+    z-index: 2;
+}
+
+.links {
+    margin-top: 12vh;
+}

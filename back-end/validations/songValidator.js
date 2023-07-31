@@ -19,7 +19,10 @@ const checkArtist = (req, res, next) => {
 const checkBoolean = (req, res, next) => {
 	if (
 		req.body.hasOwnProperty("is_favorite") &&
-		(req.body.is_favorite === "true" || req.body.is_favorite === "false")
+		(req.body.is_favorite === "true" ||
+			req.body.is_favorite === "false" ||
+			req.body.is_favorite === true ||
+			req.body.is_favorite === false)
 	) {
 		next();
 	} else {
