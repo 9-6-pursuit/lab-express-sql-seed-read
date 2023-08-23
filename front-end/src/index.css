@@ -1,0 +1,271 @@
+nav {
+
+    background: linear-gradient(135deg, #35825f, #6a4f8a, #8f3a75, #c62828);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 2px 2px 4px grey;
+    margin-bottom: 1em;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  /* button a {
+    color: antiquewhite;
+  } */
+
+  h4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  table {
+    width: 50%;
+    margin: auto;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tbody td:not(td:first-of-type):hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f4eafd;
+  }
+
+  .New form {
+    margin: auto;
+    width: 95%;
+  }
+
+  input[type],
+  textarea {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  input[type="checkbox"] {
+    margin: 0;
+    width: 15%;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+  }
+
+  .showNavigation {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  img {
+    height: 20px;
+    position: absolute;
+    left: 75%;
+    top: 20%
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  .phone1 {
+    height: 400px;
+    position: absolute;
+    left: 10%;
+    top: 30%
+  }
+
+  .phone2 {
+    height: 400px;
+    position: absolute;
+    left: 16%;
+    top: 35%
+  }
+
+  .home-txt {
+    position: absolute;
+    right: 37%;
+    top:30%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .sub-home-txt {
+    position: absolute;
+    right: 44%
+  }
+
+
+  p {
+    position: absolute;
+    right: 43%;
+    top:40%
+  }
+
+  .button2 {
+    position: absolute;
+    left: 73%;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(40, 98, 192);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 2px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button2:hover span {
+    padding-right: 25px;
+  }
+
+  .button2:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button2:hover {
+    background-color: #6a4f8a;
+  }
+
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(40, 98, 192);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 2px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button:hover {
+    background-color: #6a4f8a;
+  }
+
+.google {
+  position: absolute;
+  top: 50%;
+  left:35%;
+  height: 50px
+}
+
+.apple {
+  position: absolute;
+  top: 50%;
+  left:45%;
+  height: 50px
+}
+
+.person {
+  position: relative;
+  left: 900px; 
+  height: 600px;
+}
+
+
+.warning {
+  position: absolute;
+  left: 35%;
+  top:35%;
+  height: 200px;
+}
+
+.fourofour {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+}
+
+.fourofour-txt {
+  position: absolute;
+  left: 50%;
+  top: 45%
+
+}
+
+.warn-link {
+  position: absolute;
+  left: 50%;
+  top: 55%
+}
